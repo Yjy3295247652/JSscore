@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>评分助手</title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/rem.css">
+		<link rel="stylesheet" href="css/index.css">
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+		<script src="js/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		<!-- 侧滑导航根容器 -->
+		<div class="mui-off-canvas-wrap mui-draggable mui-scalable">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-left">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容 -->
+						<ul class="mui-table-div">
+							<li class="mui-table-div-cell">
+								<a class="mui-navigate-right choose">首页</a>
+							</li>
+							<li class="mui-table-div-cell">
+								<a class="mui-navigate-right choose">排名</a>
+							</li>
+							<li class="mui-table-div-cell">
+								<a class="mui-navigate-right choose">评分记录</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</aside>
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!-- 主页面标题 -->
+				<header class="mui-bar mui-bar-nav">
+					<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"></a>
+					<h1 class="mui-title">首页</h1>
+				</header>
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+						<div class="changeBox" id="index">
+							<section class="sec">
+								<!-- Index页 -->
+								<div class='speechContest'>
+									<div class='speech-info'>
+										<div class='speech-text'>选择演讲人：</div>
+										<div class="section">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell mui-collapse liShow">
+													<a class="mui-navigate-right chooseMan" href="#">请选择评分对象</a>
+													<input type="hidden" value="" class="hidden-speakerId">
+													<div class="mui-collapse-content xiala">
+														<p id=""></p>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class='speech-info'>
+										<div class='speech-text'>演讲题目：</div>
+										<div class='speech-show speech-title'>演讲人的演讲题目</div>
+									</div>
+									<div class='speech-info'>
+										<div class='speech-text'>所在部门：</div>
+										<div class='speech-show speech-department'>演讲人所在部门</div>
+									</div>
+									<div class='speech-info'>
+										<div class='speech-text'>投票人数：</div>
+										<div class='speech-show speech-number'>已投票人数</div>
+									</div>
+								</div>
+								<div class='scoreMethod'>
+									<div class='score-describe'>
+										<div class='score-title'>评分方式：</div>
+										<div class='score-info'>星级评分</div>
+									</div>
+									<div class='score-describe'>
+										<div class='score-title'>评分介绍：</div>
+										<div class='score-info'>
+											<div class='score-border'>
+												<div class='score-border-img'>
+													<img src='image/star.png'></img>
+													<img src='image/star.png'></img>
+													<img src='image/star.png'></img>
+													<img src='image/star.png'></img>
+													<img src='image/star-none.png'></img>
+												</div>
+												<div class='score-text'>一星一分</div>
+											</div>
+											<div class='score-border'>
+												<div class='score-border-img'>
+													<img src='image/star.png'></img>
+													<img src='image/star-none.png'></img>
+													<img src='image/star-none.png'></img>
+													<img src='image/star-none.png'></img>
+													<img src='image/star-none.png'></img>
+												</div>
+												<div class='score-text'>一星最低</div>
+											</div>
+										</div>
+									</div>
+									<div class='score-describe'>
+										<div class='score-title'>评分方向：</div>
+										<div class='score-all'>
+											<div class='score-direction'>
+												<text>整体印象（15分）</text>
+											</div>
+											<div class='score-direction'>
+												<text>演讲内容（40分）</text>
+											</div>
+											<div class='score-direction'>
+												<text>演讲技巧（20分）</text>
+											</div>
+											<div class='score-direction'>
+												<text>形象风度（15分）</text>
+											</div>
+											<div class='score-direction'>
+												<text>会场效果（10分）</text>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='scoreBtn'>
+									<div class='navigator'>去评分</div>
+								</div>
+							</section>
+						</div>
+						<div class="changeBox" id="ranking">
+							<div class='ranking'>
+								<div class='ranking-list'>
+									<div class='ranking-num'>
+										<text>第</text>
+										<text>1</text>
+										<text>名</text>
+									</div>
+									<div class='ranking-name'>某某部门—某某某</div>
+									<div class='ranking-score'>最终得分</div>
+								</div>
+							</div>
+						</div>
+						<div class="changeBox" id="record">
+							<div bindchange="swiperTab" class='manager-manage'>
+								<div class='order-empty'>
+									<div class='manager-manage-list'>
+										<div class='list-info'>演讲人员：某某某</div>
+										<div class='list-info'>演讲题目：某某</div>
+										<div class='list-info'>所在部门：某某部门</div>
+										<div class='list-info'>投票人数：10</div>
+										<div class='class-room'>分数：100</div>
+									</div>
+								</div>
+								<div class='order-empty kong'>
+									<div class='empty-img'></div>
+									<text class='order-text1'>暂无评分记录，赶紧去添加吧</text>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/index.js"></script>
+</html>

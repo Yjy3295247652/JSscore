@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		
+		<!-- 演讲内容 -->
+		<div class='scoreStandard {{currentIdx == 8? "hot" : ""}}' bindtap='chooseStandard' data-idx='8'>
+			<div class='standard-title'>演讲内容（<text>{{currentscore8?currentscore8:0}}</text>/40分）</div>
+			<div class='standard-desc'></div>
+			<div class='standard-info' data-idx='12'>
+				<div class='info-text'>围绕主题、观点正确、内容充实（15分）</div>
+				<div class='info-box'>
+					<div class='info-image'>
+						<block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]}}" wx:key=" {{index}} ">
+							<div class='image-box' data-currentstar='{{item}}' data-idx='12' bindtap='userScore'>
+								<img src="{{currentscore12 >= item && currentscoreIdx12 == 12 ? 'image/star.png':'image/star-none.png'}}">
+							</div>
+						</block>
+					</div>
+					<div class='info-score'>+{{currentscore12?currentscore12:0}}</div>
+				</div>
+			</div>
+			<div class='standard-info' data-idx='13'>
+				<div class='info-text'>措辞准确、造句流畅（10分）</div>
+				<div class='info-box'>
+					<div class='info-image'>
+						<block wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:key=" {{index}} ">
+							<div class='image-box' data-currentstar='{{item}}' data-idx='13' bindtap='userScore'>
+								<img src="{{currentscore13 >= item && currentscoreIdx13 == 13 ? 'image/star.png':'image/star-none.png'}}">
+							</div>
+						</block>
+					</div>
+					<div class='info-score'>+{{currentscore13?currentscore13:0}}</div>
+				</div>
+			</div>
+			<div class='standard-info' data-idx='14'>
+				<div class='info-text'>结构合理、逻辑清晰（15分）</div>
+				<div class='info-box'>
+					<div class='info-image'>
+						<block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]}}" wx:key=" {{index}} ">
+							<div class='image-box' data-currentstar='{{item}}' data-idx='14' bindtap='userScore'>
+								<img src="{{currentscore14 >= item && currentscoreIdx14 == 14 ? 'image/star.png':'image/star-none.png'}}">
+							</div>
+						</block>
+					</div>
+					<div class='info-score'>+{{currentscore14?currentscore14:0}}</div>
+				</div>
+			</div>
+			<div class='jiantou {{currentIdx == 8? "hot" : ""}}' catchtap="{{currentIdx == 8 ?'shouqi':'chooseStandard'}}"
+			 data-idx='8'></div>
+		</div>
+		<!-- 演讲技巧 -->
+		<div class='scoreStandard {{currentIdx == 9? "hot" : ""}}' bindtap='chooseStandard' data-idx='9'>
+			<div class='standard-title'>演讲技巧（<text>{{currentscore9?currentscore9:0}}</text>/20分）</div>
+			<div class='standard-desc'></div>
+			<div class='standard-info' data-idx='15'>
+				<div class='info-text'>语言规范、吐字清晰、声音洪亮（5分）</div>
+				<div class='info-box'>
+					<div class='info-image'>
+						<block wx:for="{{[1,2,3,4,5]}}" wx:key=" {{index}} ">
+							<div class='image-box' data-currentstar='{{item}}' data-idx='15' bindtap='userScore'>
+								<img src="{{currentscore15 >= item && currentscoreIdx15 == 15 ? 'image/star.png':'image/star-none.png'}}">
+							</div>
+						</block>
+					</div>
+					<div class='info-score'>+{{currentscore15?currentscore15:0}}</div>
+				</div>
+			</div>
+			<div class='standard-info' data-idx='16'>
+				<div class='info-text'>表达准确、流畅自然、语速恰当（5分）</div>
+				<div class='info-box'>
+					<div class='info-image'>
+						<block wx:for="{{[1,2,3,4,5]}}" wx:key=" {{index}} ">
+							<div class='image-box' data-currentstar='{{item}}' data-idx='16' bindtap='userScore'>
+								<img src="{{currentscore16 >= item && currentscoreIdx16 == 16 ? 'image/star.png':'image/star-none.png'}}">
+							</div>
+						</block>
+					</div>
+					<div class='info-score'>+{{currentscore16?currentscore16:0}}</div>
+				</div>
+			</div>
+			<div class='standard-info' data-idx='17'>
+				<div class='info-text'>节奏合理、感情丰富（10分）</div>
+				<div class='info-box'>
+					<div class='info-image'>
+						<block wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:key=" {{index}} ">
+							<div class='image-box' data-currentstar='{{item}}' data-idx='17' bindtap='userScore'>
+								<img src="{{currentscore17 >= item && currentscoreIdx17 == 17 ? 'image/star.png':'image/star-none.png'}}">
+							</div>
+						</block>
+					</div>
+					<div class='info-score'>+{{currentscore17?currentscore17:0}}</div>
+				</div>
+			</div>
+			<div class='jiantou {{currentIdx == 9? "hot" : ""}}' catchtap="{{currentIdx == 9 ?'shouqi':'chooseStandard'}}"
+			 data-idx='9'></div>
+		</div>
+		<!-- 形象风度 -->
+		<div class='scoreStandard {{currentIdx == 10? "hot" : ""}}' bindtap='chooseStandard' data-idx='10'>
+			<div class='standard-title'>形象风度分（<text>{{currentscore10?currentscore10:0}}</text>/15分）</div>
+			<div class='standard-desc'></div>
+			<div class='standard-info' data-idx='18'>
+				<div class='info-text'>精神饱满、仪态大方（10分）</div>
+				<div class='info-box'>
+					<div class='info-image'>
+						<block wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:key=" {{index}} ">
+							<div class='image-box' data-currentstar='{{item}}' data-idx='18' bindtap='userScore'>
+								<img src="{{currentscore18 >= item && currentscoreIdx18 == 18 ? 'image/star.png':'image/star-none.png'}}">
+							</div>
+						</block>
+					</div>
+					<div class='info-score'>+{{currentscore18?currentscore18:0}}</div>
+				</div>
+			</div>
+			<div class='standard-info' data-idx='19'>
+				<div class='info-text'>良好运用姿态动作、手势、表情（5分）</div>
+				<div class='info-box'>
+					<div class='info-image'>
+						<block wx:for="{{[1,2,3,4,5]}}" wx:key=" {{index}} ">
+							<div class='image-box' data-currentstar='{{item}}' data-idx='19' bindtap='userScore'>
+								<img src="{{currentscore19 >= item && currentscoreIdx19 == 19 ? 'image/star.png':'image/star-none.png'}}">
+							</div>
+						</block>
+					</div>
+					<div class='info-score'>+{{currentscore19?currentscore19:0}}</div>
+				</div>
+			</div>
+			<div class='jiantou {{currentIdx == 10? "hot" : ""}}' catchtap="{{currentIdx == 10 ?'shouqi':'chooseStandard'}}"
+			 data-idx='10'></div>
+		</div>
+		<!-- 会场效果 -->
+		<div class='scoreStandard {{currentIdx == 11? "hot" : ""}}' bindtap='chooseStandard' data-idx='11'>
+			<div class='standard-title'>会场效果（<text>{{currentscore11?currentscore11:0}}</text>/10分）</div>
+			<div class='standard-desc'></div>
+			<div class='standard-info' data-idx='20'>
+				<div class='info-text'>具有较强的吸引力、感染力和号召力，能较好地与听众感情融在一起，营造良好的演讲效果（10分）</div>
+				<div class='info-box'>
+					<div class='info-image'>
+						<block wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:key=" {{index}} ">
+							<div class='image-box' data-currentstar='{{item}}' data-idx='20' bindtap='userScore'>
+								<img src="{{currentscore20 >= item && currentscoreIdx20 == 20 ? 'image/star.png':'image/star-none.png'}}">
+							</div>
+						</block>
+					</div>
+					<div class='info-score'>+{{currentscore20?currentscore20:0}}</div>
+				</div>
+			</div>
+			<div class='jiantou {{currentIdx == 11? "hot" : ""}}' catchtap="{{currentIdx == 11 ?'shouqi':'chooseStandard'}}"
+			 data-idx='11'></div>
+		</div>
+		
+		
+		
+		
+		
+	</body>
+</html>

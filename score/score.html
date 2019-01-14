@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>评分助手</title>
+		<link rel="stylesheet" href="css/rem.css">
+		<link rel="stylesheet" href="css/score.css">
+		<script src="js/jquery-3.3.1.js"></script>
+	</head>
+	<body>
+		
+		<div class="head">
+			<div class="back">
+				<img src="image/back.png" alt="返回按钮">
+			</div>
+			<div class="head-text">评分助手</div>
+			<div class="back"></div>
+		</div>
+		
+		<div class='speechContest'>
+			<div class='speech-title'>参赛人员演讲题目</div>
+			<div class='speech-info userName'>演讲人员：姓名</div>
+			<div class='speech-info deptName'>所在部门：名称</div>
+			<div class='speech-info plance'>已投票数：已有几人投票</div>
+		</div>
+		
+		<div class="parent">
+			<!-- 整体印象 -->
+			<div class='scoreStandard hot' bindtap='chooseStandard' data-idx='4'>
+				<div class='standard-title'>整体形象分（<text>0</text>/15分）</div>
+				<div class='standard-desc'></div>
+				<div class='standard-info' data-idx='5'>
+					<div class='info-text'>仪表端庄、着装规范（5分）</div>
+					<div class='info-box'>
+						<div class='info-image'>
+							<div class='image-box'>
+								<img src="image/star-none.png">
+							</div>
+						</div>
+						<div class='info-score'>+0</div>
+					</div>
+				</div>
+				<div class='jiantou'></div>
+			</div>
+		</div>
+		
+		
+		
+		
+		
+		<div class='submitBtn' bindtap='submitInfo'>提交</div>
+	</body>
+	<script type="text/javascript" src="js/score.js"></script>
+</html>
